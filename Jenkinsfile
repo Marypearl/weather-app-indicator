@@ -2,7 +2,7 @@ pipeline {
     agent any
     environment {
         SSH_CRED = credentials('web-server-key')
-        def CONNECT = 'ssh -o StrictHostKeyChecking=no ubuntu@ec2-54-197-31-199.compute-1.amazonaws.com'
+        def CONNECT = 'ssh -o StrictHostKeyChecking=no ubuntu@ec2-100-26-153-16.compute-1.amazonaws.com'
     }
     stages {
 
@@ -10,7 +10,7 @@ pipeline {
             steps {
                 echo 'install required packages'
                 sh "npm install"
-                sh "cp /home/ubuntu/.env .env"
+                sh "sudo cp /home/ubuntu/.env .env"
                 echo 'react packages installed'
             }
         }
