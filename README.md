@@ -19,3 +19,8 @@
 
 ## Node Version
 - Use Node v18.*
+
+  
+## Node Version
+- npm install
+- npm run start
